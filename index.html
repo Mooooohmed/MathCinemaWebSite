@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math cinema</title>
+    <!-- &&&&&&&&&& font familes online &&&&&&&&&&&&&&& -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Lobster&family=Roboto:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- &&&&&&&&&& bootsrap &&&&&&&&&&&&&&& -->
+    <link rel="stylesheet" href="./content/css/vendors/bootstrap-min.css" />
+    <!-- &&&&&&&&&& font awesome &&&&&&&&&&&&&&& -->
+    <link rel="stylesheet" href="content/css/vendors/awesome-min.css" />
+    <!-- ########## minified علي بعد خطوة واحدة من ملف ال fontawesome الخاص بال folder webfonts  ملحوظة يجب ان يكون ال  -->
+    <!-- &&&&&&&&&& main css &&&&&&&&&&&&&&& -->
+    <!-- <link rel="stylesheet" href="./content/css/main/main.css" /> -->
+    <link rel="stylesheet" href="./content/css/main/style.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <section class="block-container">
+        <header class="d-flex justify-content-between align-items-center">
+          <div class="nav__card">
+            <div class="nav__wraper">
+              <img
+                src="./content/assets/images/image16.jpg"
+                class="nav__img"
+                alt="math cinema image"
+              />
+            </div>
+          </div>
+          <!-- ...................................................................................  -->
+          <ul class="d-flex justify-content-between algin-items-center">
+            <li class="nav__menu">
+              <a href="index.html" class="nav__link">
+                <!-- <i class="nav__icon fa-solid fa-house"></i> -->
+                <span class="nav__span nav__span--active">home</span></a
+              >
+            </li>
+            <li class="nav__menu">
+              <a
+                href="pages/page_1_course/index.html"
+                id="findteacher"
+                class="nav__link"
+              >
+                <!-- <i class="fa-solid fa-file-lines nav__icon"></i> -->
+                <span class="nav__span">find teacher</span></a
+              >
+            </li>
+            <li class="nav__menu">
+              <a class="nav__link nav__link--contact" id="contact-link">
+                <!-- <i class="fa-solid fa-file-lines nav__icon"></i> -->
+                <span class="nav__span">contact us</span></a
+              >
+            </li>
+            <div class="position-relative nav__menu nav__menu--acount">
+              <li class="nav__register">
+                <a class="nav__link">
+                  <!-- <i class="fa-solid fa-envelope nav__icon"></i> -->
+                  <span class="nav__span nav__span--acount"
+                    >teachers accounts</span
+                  ></a
+                >
+              </li>
+              <ul class="nav__login d-none">
+                <li class="nav__login-item">
+                  <a href="pages/page_3_login/index.html">login</a>
+                </li>
+                <li class="nav__login-item nav__login-item--border">
+                  <a href="" class="alert-unavilable">sign up</a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </header>
+      </section>
+    </nav>
+    <nav class="nav-responsive">
+      <section class="block-container">
+        <header class="d-flex justify-content-between align-items-center">
+          <div class="nav__card">
+            <div class="nav__wraper">
+              <img
+                src="./content/assets/images/image16.jpg"
+                class="nav__img"
+                alt="math cinema image"
+              />
+            </div>
+          </div>
+          <!-- ...................................................................................  -->
+          <div class="menu-icon">
+            <span class="menu-icon__span menu-icon__span--first"></span>
+            <span class="menu-icon__span menu-icon__span--second"></span>
+            <span class="menu-icon__span menu-icon__span--third"></span>
+          </div>
+        </header>
+        <ul class="menu-envelop">
+          <li class="nav__menu nav__menu--responsive pt-4">
+            <a href="index.html" class="nav__link">
+              <!-- <i class="nav__icon fa-solid fa-house"></i> -->
+              <span class="nav__span nav__span--active nav__span--responsive"
+                >home</span
+              ></a
+            >
+          </li>
+          <li class="nav__menu nav__menu--responsive pt-4">
+            <a
+              href="pages/page_1_course/index.html"
+              class="nav__link"
+              id="findteacher"
+            >
+              <!-- <i class="fa-solid fa-file-lines nav__icon"></i> -->
+              <span class="nav__span nav__span--responsive"
+                >find teacher</span
+              ></a
+            >
+          </li>
+          <li class="nav__menu nav__menu--responsive pt-4">
+            <a class="nav__link" id="contact-link">
+              <!-- <i class="fa-solid fa-file-lines nav__icon"></i> -->
+              <span class="nav__span nav__span--responsive">contact us</span></a
+            >
+          </li>
+          <div
+            class="position-relative nav__menu nav__menu--acount nav__menu--responsive"
+          >
+            <li class="nav__register py-4">
+              <a class="nav__link">
+                <!-- <i class="fa-solid fa-envelope nav__icon"></i> -->
+                <span class="nav__span nav__span--acount nav__span--responsive"
+                  >teachers accounts</span
+                ></a
+              >
+            </li>
+            <ul class="nav__login d-none">
+              <li class="nav__login-item">
+                <a href="pages/page_3_login/index.html">login</a>
+              </li>
+              <li class="nav__login-item nav__login-item--border">
+                <a href="" class="alert-unavilable">sign up</a>
+              </li>
+            </ul>
+          </div>
+        </ul>
+      </section>
+    </nav>
+    <main>
+      <article class="welcome">
+        <div class="welcome__intro">
+          <div class="welcome__card">
+            <h1 class="welcome__header">welcome to math cinema</h1>
+            <p class="welcome__header welcome__header--text">
+              let's learn together
+            </p>
+          </div>
+        </div>
+      </article>
+      <!-- --------------------------all you need -------------------------------------------->
+      <article class="category">
+        <section class="block-container">
+          <article class="category__envelop reveal-section">
+            <div class="category__header text-center">
+              <h2 class="category__header-head">
+                Many teachers are ready to help you
+                <span
+                  ><i
+                    class="category__header-icon fa-solid fa-graduation-cap"
+                  ></i
+                ></span>
+              </h2>
+            </div>
+            <section class="category__statistics row gx-5">
+              <div class="col-md-12 col-lg-4 mb-sm-5 category__prim">
+                <div class="category__statistics-item">
+                  <h3 class="category__statistics-title">primary teachers</h3>
+                  <div class="category__statistics-value" data-count="580">
+                    0
+                  </div>
+                  <button class="category__statistics-btn" type="button">
+                    <a href="" class="alert-unavilable">Apply as a teacher</a>
+                  </button>
+                </div>
+              </div>
+              <div class="col-md-12 col-lg-4 mb-sm-5 category__prep">
+                <div class="category__statistics-item">
+                  <h3 class="category__statistics-title">prep teachers</h3>
+                  <div class="category__statistics-value" data-count="352">
+                    0
+                  </div>
+                  <button class="category__statistics-btn" type="button">
+                    <a href="" class="alert-unavilable">Apply as a teacher</a>
+                  </button>
+                </div>
+              </div>
+              <div class="col-md-12 col-lg-4">
+                <div class="category__statistics-item">
+                  <h3 class="category__statistics-title">secondary teachers</h3>
+                  <div class="category__statistics-value" data-count="446">
+                    0
+                  </div>
+                  <button class="category__statistics-btn" type="button">
+                    <a href="" class="alert-unavilable">Apply as a teacher</a>
+                  </button>
+                </div>
+              </div>
+            </section>
+          </article>
+
+          <div class="category__map reveal-section">
+            <section class="row">
+              <div class="col-xl-7">
+                <!-- <figure class="responisve__wraper">
+                  <img
+                    src="content/assets/images/map.JPG"
+                    alt="egypt map"
+                    class="responisve__image category__map-image"
+                  />
+                </figure> -->
+                <img
+                  src="content/assets/images/map.JPG"
+                  class="category__map-image"
+                  alt="egypt map"
+                />
+              </div>
+              <div class="col-xl-5 flex-wrap">
+                <p class="category__map-text category__map-text--title">
+                  around all egyptian cities
+                </p>
+                <ul class="category__map-cities">
+                  <li class="category__map-name">
+                    <button class="category__map-citybtn">Alexandria</button>
+                  </li>
+                  <li class="category__map-name">
+                    <button class="category__map-citybtn">Aswan</button>
+                  </li>
+                  <li class="category__map-name">
+                    <button class="category__map-citybtn">Asyut</button>
+                  </li>
+                  <li class="category__map-name">
+                    <button class="category__map-citybtn">Beheira</button>
+                  </li>
+                  <li class="category__map-name">
+                    <button class="category__map-citybtn">Beni Suef</button>
+                  </li>
+                  <li class="category__map-name">
+                    <button class="category__map-citybtn">cairo</button>
+                  </li>
+                  <li class="category__map-name">
+                    <button class="category__map-citybtn">Dakahlia</button>
+                  </li>
+                  <li class="category__map-name">
+                    <button class="category__map-citybtn">Damietta</button>
+                  </li>
+                  <li class="category__map-name">
+                    <button class="category__map-citybtn">Faiyum</button>
+                  </li>
+                  <li class="category__map-name">
+                    <button class="category__map-citybtn">Gharbia</button>
+                  </li>
+                  <li class="category__map-name">
+                    <button class="category__map-citybtn">Giza</button>
+                  </li>
+                  <li class="category__map-name">
+                    <button class="category__map-citybtn">Ismailia</button>
+                  </li>
+                  <li class="category__map-name">
+                    <button class="category__map-citybtn">
+                      Kafr El Sheikh
+                    </button>
+                  </li>
+                  <li class="category__map-name">
+                    <button class="category__map-citybtn">Luxor</button>
+                  </li>
+                  <li class="category__map-name">
+                    <button class="category__map-citybtn">Matruh</button>
+                  </li>
+                  <li class="category__map-name">
+                    <button class="category__map-citybtn">Minya</button>
+                  </li>
+                  <li class="category__map-name">
+                    <button class="category__map-citybtn">Monufia</button>
+                  </li>
+                  <li class="category__map-name">
+                    <button class="category__map-citybtn">New Valley</button>
+                  </li>
+                  <li class="category__map-name">
+                    <button class="category__map-citybtn">North Sinai</button>
+                  </li>
+                  <li class="category__map-name">
+                    <button class="category__map-citybtn">Port Said</button>
+                  </li>
+                  <li class="category__map-name">
+                    <button class="category__map-citybtn">Qalyubia</button>
+                  </li>
+                  <li class="category__map-name">
+                    <button class="category__map-citybtn">Qena</button>
+                  </li>
+                  <li class="category__map-name">
+                    <button class="category__map-citybtn">Red Sea</button>
+                  </li>
+                  <li class="category__map-name">
+                    <button class="category__map-citybtn">Sharqia</button>
+                  </li>
+                  <li class="category__map-name">
+                    <button class="category__map-citybtn">Sohag</button>
+                  </li>
+                  <li class="category__map-name">
+                    <button class="category__map-citybtn">South Sinai</button>
+                  </li>
+                  <li class="category__map-name">
+                    <button class="category__map-citybtn">Suez</button>
+                  </li>
+                  <button
+                    type="button"
+                    class="category__map-gobtn btn btn-outline-success btn-lg"
+                  >
+                    <a href="pages/page_1_course/index.html" target="_blank"
+                      >find a teacher</a
+                    >
+                  </button>
+                </ul>
+              </div>
+            </section>
+          </div>
+        </section>
+      </article>
+      <!-- --------------------------services-------------------------------------------->
+      <article class="services">
+        <div class="category__header text-center reveal-section">
+          <h2 class="category__header-head">
+            Professional services <i class="fa-solid fa-trophy"></i>
+          </h2>
+        </div>
+        <div class="block-container mt-4 reveal-section">
+          <section class="slider">
+            <div class="slider__slide">
+              <div class="slider__slide-wraper">
+                <img
+                  src="content/assets/images/online.jpg"
+                  class="slider__slide-image"
+                />
+              </div>
+              <div>
+                <p class="slider__slide-text">
+                  <i class="slider__slide-icon fas fa-chalkboard"></i> online
+                  classes
+                </p>
+              </div>
+            </div>
+            <div class="slider__slide">
+              <div class="slider__slide-wraper">
+                <img
+                  src="content/assets/images/offline.png"
+                  class="slider__slide-image"
+                />
+              </div>
+              <div>
+                <p class="slider__slide-text">
+                  <i class="slider__slide-icon fas fa-chalkboard"></i> offline
+                  classes
+                </p>
+              </div>
+            </div>
+            <div class="slider__slide">
+              <div class="slider__slide-wraper">
+                <img
+                  src="content/assets/images/record.jpg"
+                  class="slider__slide-image"
+                />
+              </div>
+              <div>
+                <p class="slider__slide-text">
+                  <i class="slider__slide-icon fas fa-chalkboard"></i> recorded
+                  materials
+                </p>
+              </div>
+            </div>
+            <div class="slider__slide">
+              <div class="slider__slide-wraper">
+                <img
+                  src="content/assets/images/summarybook.webp"
+                  class="slider__slide-image"
+                />
+              </div>
+              <div>
+                <p class="slider__slide-text">
+                  <i class="slider__slide-icon fas fa-chalkboard"></i> summary
+                  books
+                </p>
+              </div>
+            </div>
+            <button class="slider__btn slider__btn--left">
+              <i id="angle-icon" class="d-block fa-solid fa-angle-left"></i>
+            </button>
+            <button class="slider__btn slider__btn--right">
+              <i id="angle-icon" class="d-block fa-solid fa-angle-right"></i>
+            </button>
+            <div class="dots"></div>
+          </section>
+          <section>
+            <section class="row reveal-section">
+              <div class="col-md-5 flex-wrap">
+                <p class="services__text services__text--title">
+                  <span class="services__highlight">R</span>ead about your
+                  teacher :
+                </p>
+                <ul>
+                  <li class="services__lines">
+                    <i class="services__dot fa-solid fa-circle"></i>His cv
+                  </li>
+                  <li class="services__lines">
+                    <i class="services__dot fa-solid fa-circle"></i>His teaching
+                    zone
+                  </li>
+                  <li class="services__lines">
+                    <i class="services__dot fa-solid fa-circle"></i>His teaching
+                    service
+                  </li>
+                  <li class="services__lines">
+                    <i class="services__dot fa-solid fa-circle"></i>contact with
+                    him
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-7">
+                <figure class="responisve__wraper">
+                  <img
+                    src="content/assets/images/image10.jpg"
+                    alt="teacher name"
+                    class="responisve__image"
+                  />
+                </figure>
+                <!-- <img
+                  src="content/assets/images/image10.jpg"
+                  class="category__services__image"
+                  alt="a teacher smiles warmly and holds a book in his hand"
+                /> -->
+              </div>
+            </section>
+          </section>
+        </div>
+      </article>
+      <!-- --------------------------groups-------------------------------------------->
+      <article class="groups">
+        <div class="category__header text-center reveal-section">
+          <h2 class="category__header-head">
+            Teachers for all grades <i class="fa-solid fa-chalkboard-user"></i>
+          </h2>
+        </div>
+        <section class="block-container reveal-section">
+          <section class="groups__stages">
+            <div class="groups__filter">
+              <div class="groups__items">
+                <p class="groups__text">
+                  <i class="groups__icon fa-solid fa-check"></i>primary stage
+                </p>
+              </div>
+              <div class="groups__btn">
+                <button
+                  type="button"
+                  class="btn btn-outline-success btn-lg col-12"
+                  data-grade="primary stage"
+                >
+                  <a href="pages/page_1_course/index.html">get started</a>
+                </button>
+              </div>
+            </div>
+            <section class="groups__filter">
+              <div class="groups__items">
+                <p class="groups__text groups__text--hover">
+                  <i class="groups__icon fa-solid fa-check"></i> preparatory
+                  stage
+                </p>
+              </div>
+              <div class="groups__btn">
+                <button
+                  type="button"
+                  class="btn btn-outline-success btn-lg col-12"
+                  data-grade="preparatory stage"
+                >
+                  <a href="pages/page_1_course/index.html">get started</a>
+                </button>
+              </div>
+            </section>
+            <div class="groups__filter">
+              <div class="groups__items">
+                <p class="groups__text">
+                  <i class="groups__icon fa-solid fa-check"></i>secondary stage
+                </p>
+              </div>
+              <div class="groups__btn">
+                <button
+                  type="button"
+                  class="btn btn-outline-success btn-lg col-12"
+                  data-grade="secondary stage"
+                >
+                  <a href="pages/page_1_course/index.html">get started</a>
+                </button>
+              </div>
+            </div>
+          </section>
+        </section>
+      </article>
+    </main>
+    <footer class="footer footer1" id="footer1">
+      <!-- ........................row 1 ........................................... -->
+      <section class="footer__block">
+        <div class="footer__item">
+          <figure class="footer__card">
+            <div class="footer__wraper">
+              <img
+                class="footer__img"
+                src="content/assets/images/image16.jpg"
+                alt="math cinema logo"
+              />
+            </div>
+          </figure>
+        </div>
+        <div class="footer__item">
+          <h3 class="footer__head-primary pt-4">information</h3>
+        </div>
+        <div class="footer__item">
+          <h3 class="footer__head-primary pt-4">contact us</h3>
+        </div>
+        <di class="footer__item">
+          <h3 class="footer__head-primary pt-4">leave a message</h3>
+        </di>
+      </section>
+      <!-- ........................row 2 ........................................... -->
+      <section class="footer__block">
+        <div class="footer__item">
+          <h3 class="footer__head-secondary px-1">Dear Students,</h3>
+          <p class="footer__text px-1">
+            Welcome aboard! At Math cinema, our primary goal is to be your
+            unwavering companions on this incredible journey through education.
+            We're here to provide the support, resources, and guidance you need
+            to thrive and succeed at every step of your school adventure.
+          </p>
+          <p class="footer__text ps-1">Best regards</p>
+        </div>
+        <ul class="footer__item">
+          <li
+            class="footer__head-secondary footer__head-secondary--link text-center ps-1"
+          >
+            <a class="footer__link" href="#">about us</a>
+          </li>
+          <li
+            class="footer__head-secondary footer__head-secondary--link text-center pt-4 ps-1"
+          >
+            <a class="footer__link" href="#">find teachers</a>
+          </li>
+          <li
+            class="footer__head-secondary footer__head-secondary--link text-center pt-4 ps-1"
+          >
+            <a class="footer__link" href="#">join teachers</a>
+          </li>
+          <li
+            class="footer__head-secondary footer__head-secondary--link text-center pt-4 ps-1"
+          >
+            <a class="footer__link" href="#">courses</a>
+          </li>
+          <li
+            class="footer__head-secondary footer__head-secondary--link text-center pt-4 ps-1"
+          >
+            <a class="footer__link" href="#">careers</a>
+          </li>
+          <li
+            class="footer__head-secondary footer__head-secondary--link text-center pt-4 ps-1"
+          >
+            <a class="footer__link" href="#">advertising</a>
+          </li>
+        </ul>
+        <section class="footer__item ps-2">
+          <h3
+            class="footer__head-secondary footer__head-secondary--link text-decoration-none text-center"
+          >
+            address
+          </h3>
+          <p class="footer__text pt-1 text-center">faisal street-Boulaq-Giza</p>
+          <h3
+            class="footer__head-secondary footer__head-secondary--link text-decoration-none pt-3 text-center"
+          >
+            technical support
+          </h3>
+          <p class="footer__text pt-1 text-center">01033060478 - 01115631586</p>
+          <h3
+            class="footer__head-secondary footer__head-secondary--link text-decoration-none pt-3 text-center"
+          >
+            our email
+          </h3>
+          <p class="footer__text pt-1 text-center">supermage93@gmail.com</p>
+          <h4
+            class="footer__head-secondary footer__head-secondary--link text-decoration-none pt-3 text-center"
+          >
+            social links
+          </h4>
+          <ul class="d-flex justify-content-between">
+            <li class="footer__text pt-1 text-center fs-4">
+              <a href="https://www.facebook.com/profile.php?id=100064024149705"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+            </li>
+            <li class="footer__text pt-1 text-center fs-4">
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </li>
+            <li class="footer__text pt-1 text-center fs-4">
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li class="footer__text pt-1 text-center fs-4">
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </li>
+            <li class="footer__text pt-1 text-center fs-4">
+              <a href="https://wa.me/01115631586"
+                ><i class="fa-brands fa-whatsapp"></i
+              ></a>
+            </li>
+          </ul>
+        </section>
+        <section class="footer__item footer__inquires">
+          <form class="footer__form pt-1">
+            <label
+              class="d-block footer__head-secondary footer__head-secondary--link text-decoration-none"
+            >
+              name</label
+            >
+            <input
+              class="footer__form-input d-block"
+              type="text"
+              placeholder="write your name"
+              required
+            />
+            <label
+              class="d-block footer__head-secondary footer__head-secondary--link text-decoration-none"
+            >
+              phone</label
+            >
+            <input
+              class="footer__form-input d-block"
+              placeholder="write phone number"
+              required
+            />
+            <label
+              class="d-block footer__head-secondary footer__head-secondary--link text-decoration-none"
+            >
+              email</label
+            >
+            <input
+              class="footer__form-input d-block"
+              type="email"
+              placeholder="write your email"
+              required
+            />
+            <label
+              class="d-block footer__head-secondary footer__head-secondary--link text-decoration-none"
+            >
+              your message</label
+            >
+            <textarea
+              class="footer__form-input d-block footer__message-area"
+            ></textarea>
+            <button class="d-block footer__btn">send your mesage</button>
+          </form>
+        </section>
+      </section>
+    </footer>
+    <footer class="footer footer2" id="footer2">
+      <section class="footer__block">
+        <div class="footer__item">
+          <figure class="footer__card">
+            <div class="footer__wraper">
+              <img
+                class="footer__img"
+                src="content/assets/images/image16.jpg"
+                alt="math cinema logo"
+              />
+            </div>
+          </figure>
+          <div class="pt-4">
+            <h3 class="footer__head-secondary px-1">Dear Students,</h3>
+            <p class="footer__text px-1">
+              Welcome aboard! At Math cinema, our primary goal is to be your
+              unwavering companions on this incredible journey through
+              education. We're here to provide the support, resources, and
+              guidance you need to thrive and succeed at every step of your
+              school adventure.
+            </p>
+            <p class="footer__text ps-1">Best regards</p>
+          </div>
+        </div>
+        <div class="footer__item">
+          <h3 class="footer__head-primary pt-4">information</h3>
+          <ul class="pt-4">
+            <li
+              class="footer__head-secondary footer__head-secondary--link text-center ps-1"
+            >
+              <a class="footer__link" href="#">about us</a>
+            </li>
+            <li
+              class="footer__head-secondary footer__head-secondary--link text-center pt-4 ps-1"
+            >
+              <a class="footer__link" href="#">find teachers</a>
+            </li>
+            <li
+              class="footer__head-secondary footer__head-secondary--link text-center pt-4 ps-1"
+            >
+              <a class="footer__link" href="#">join teachers</a>
+            </li>
+            <li
+              class="footer__head-secondary footer__head-secondary--link text-center pt-4 ps-1"
+            >
+              <a class="footer__link" href="#">courses</a>
+            </li>
+            <li
+              class="footer__head-secondary footer__head-secondary--link text-center pt-4 ps-1"
+            >
+              <a class="footer__link" href="#">careers</a>
+            </li>
+            <li
+              class="footer__head-secondary footer__head-secondary--link text-center pt-4 ps-1"
+            >
+              <a class="footer__link" href="#">advertising</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__item">
+          <h3 class="footer__head-primary pt-4">contact us</h3>
+          <ul class="pt-4">
+            <li>
+              <h3
+                class="footer__head-secondary footer__head-secondary--link text-decoration-none text-center"
+              >
+                address
+              </h3>
+              <p class="footer__text pt-1 text-center">
+                faisal street-Boulaq-Giza
+              </p>
+            </li>
+            <li>
+              <h3
+                class="footer__head-secondary footer__head-secondary--link text-decoration-none pt-3 text-center"
+              >
+                technical support
+              </h3>
+              <p class="footer__text pt-1 text-center">
+                01033060478 - 01115631586
+              </p>
+            </li>
+            <li>
+              <h3
+                class="footer__head-secondary footer__head-secondary--link text-decoration-none pt-3 text-center"
+              >
+                our email
+              </h3>
+              <p class="footer__text pt-1 text-center">supermage93@gmail.com</p>
+            </li>
+            <li>
+              <h4
+                class="footer__head-secondary footer__head-secondary--link text-decoration-none pt-3 text-center"
+              >
+                social links
+              </h4>
+              <ul class="d-flex justify-content-between">
+                <li class="footer__text pt-1 text-center fs-4">
+                  <a
+                    href="https://www.facebook.com/profile.php?id=100064024149705"
+                    ><i class="fa-brands fa-facebook"></i
+                  ></a>
+                </li>
+                <li class="footer__text pt-1 text-center fs-4">
+                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </li>
+                <li class="footer__text pt-1 text-center fs-4">
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </li>
+                <li class="footer__text pt-1 text-center fs-4">
+                  <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </li>
+                <li class="footer__text pt-1 text-center fs-4">
+                  <a href="https://wa.me/01115631586"
+                    ><i class="fa-brands fa-whatsapp"></i
+                  ></a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__item mt-5">
+          <h3 class="footer__head-primary pt-4">leave a message</h3>
+          <section class="footer__inquires">
+            <form class="footer__form pt-4">
+              <label
+                class="d-block footer__head-secondary footer__head-secondary--link text-decoration-none"
+              >
+                name</label
+              >
+              <input
+                class="footer__form-input d-block"
+                type="text"
+                placeholder="write your name"
+                required
+              />
+              <label
+                class="d-block footer__head-secondary footer__head-secondary--link text-decoration-none"
+              >
+                phone</label
+              >
+              <input
+                class="footer__form-input d-block"
+                placeholder="write phone number"
+                required
+              />
+              <label
+                class="d-block footer__head-secondary footer__head-secondary--link text-decoration-none"
+              >
+                email</label
+              >
+              <input
+                class="footer__form-input d-block"
+                type="email"
+                placeholder="write your email"
+                required
+              />
+              <label
+                class="d-block footer__head-secondary footer__head-secondary--link text-decoration-none"
+              >
+                your message</label
+              >
+              <textarea
+                class="footer__form-input d-block footer__message-area"
+              ></textarea>
+              <button class="d-block footer__btn">send your mesage</button>
+            </form>
+          </section>
+        </div>
+      </section>
+    </footer>
+    <footer class="footer footer3" id="footer3">
+      <section class="responisve-message">
+        <div class="ps-1">
+          <figure class="responisve__card">
+            <div class="footer__wraper">
+              <img
+                class="footer__img"
+                src="content/assets/images/image16.jpg"
+                alt="math cinema logo"
+              />
+            </div>
+          </figure>
+        </div>
+        <div>
+          <h3 class="footer__head-secondary pe-5">Dear Students,</h3>
+          <p class="footer__text pe-5">
+            Welcome aboard! At Math cinema, our primary goal is to be your
+            unwavering companions on this incredible journey through education.
+            We're here to provide the support, resources, and guidance you need
+            to thrive and succeed at every step of your school adventure.
+          </p>
+          <p class="footer__text ps-1 pe-5">Best regards</p>
+        </div>
+      </section>
+      <section class="responisve-message">
+        <div>
+          <h3 class="footer__head-primary pt-4">information</h3>
+          <ul class="pt-4">
+            <li
+              class="footer__head-secondary footer__head-secondary--link text-center ps-1"
+            >
+              <a class="footer__link" href="#">about us</a>
+            </li>
+            <li
+              class="footer__head-secondary footer__head-secondary--link text-center pt-4 ps-1"
+            >
+              <a class="footer__link" href="#">find teachers</a>
+            </li>
+            <li
+              class="footer__head-secondary footer__head-secondary--link text-center pt-4 ps-1"
+            >
+              <a class="footer__link" href="#">join teachers</a>
+            </li>
+            <li
+              class="footer__head-secondary footer__head-secondary--link text-center pt-4 ps-1"
+            >
+              <a class="footer__link" href="#">courses</a>
+            </li>
+            <li
+              class="footer__head-secondary footer__head-secondary--link text-center pt-4 ps-1"
+            >
+              <a class="footer__link" href="#">careers</a>
+            </li>
+            <li
+              class="footer__head-secondary footer__head-secondary--link text-center pt-4 ps-1"
+            >
+              <a class="footer__link" href="#">advertising</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__head-primary pt-4">contact us</h3>
+          <ul class="pt-4">
+            <li>
+              <h3
+                class="footer__head-secondary footer__head-secondary--link text-decoration-none text-center"
+              >
+                address
+              </h3>
+              <p class="footer__text pt-1 text-center">
+                faisal street-Boulaq-Giza
+              </p>
+            </li>
+            <li>
+              <h3
+                class="footer__head-secondary footer__head-secondary--link text-decoration-none pt-3 text-center"
+              >
+                technical support
+              </h3>
+              <p class="footer__text pt-1 text-center">
+                01033060478 - 01115631586
+              </p>
+            </li>
+            <li>
+              <h3
+                class="footer__head-secondary footer__head-secondary--link text-decoration-none pt-3 text-center"
+              >
+                our email
+              </h3>
+              <p class="footer__text pt-1 text-center">supermage93@gmail.com</p>
+            </li>
+            <li>
+              <h4
+                class="footer__head-secondary footer__head-secondary--link text-decoration-none pt-3 text-center"
+              >
+                social links
+              </h4>
+              <ul class="d-flex justify-content-between px-4">
+                <li class="footer__text pt-1 text-center fs-4">
+                  <a
+                    href="https://www.facebook.com/profile.php?id=100064024149705"
+                    ><i class="fa-brands fa-facebook"></i
+                  ></a>
+                </li>
+                <li class="footer__text pt-1 text-center fs-4">
+                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </li>
+                <li class="footer__text pt-1 text-center fs-4">
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </li>
+                <li class="footer__text pt-1 text-center fs-4">
+                  <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </li>
+                <li class="footer__text pt-1 text-center fs-4">
+                  <a href="https://wa.me/01115631586"
+                    ><i class="fa-brands fa-whatsapp"></i
+                  ></a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <div class="footer__item mt-5">
+        <h3 class="footer__head-primary pt-4">leave a message</h3>
+        <section class="footer__inquires">
+          <form class="footer__form pt-4">
+            <label
+              class="d-block footer__head-secondary footer__head-secondary--link text-decoration-none"
+            >
+              name</label
+            >
+            <input
+              class="footer__form-input d-block"
+              type="text"
+              placeholder="write your name"
+              required
+            />
+            <label
+              class="d-block footer__head-secondary footer__head-secondary--link text-decoration-none"
+            >
+              phone</label
+            >
+            <input
+              class="footer__form-input d-block"
+              placeholder="write phone number"
+              required
+            />
+            <label
+              class="d-block footer__head-secondary footer__head-secondary--link text-decoration-none"
+            >
+              email</label
+            >
+            <input
+              class="footer__form-input d-block"
+              type="email"
+              placeholder="write your email"
+              required
+            />
+            <label
+              class="d-block footer__head-secondary footer__head-secondary--link text-decoration-none"
+            >
+              your message</label
+            >
+            <textarea
+              class="footer__form-input d-block footer__message-area"
+            ></textarea>
+            <button class="d-block footer__btn">send your mesage</button>
+          </form>
+        </section>
+      </div>
+    </footer>
+    <script src="content/js/vendors/bootstrap.bundle.min.js"></script>
+    <script src="content/js/vendors/jquery-3.7.0.min.js"></script>
+    <script src="content/js/main/app.js"></script>
+  </body>
+</html>

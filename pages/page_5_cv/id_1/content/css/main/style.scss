@@ -1,0 +1,276 @@
+/* .....................................variables.............................................  */
+$main-font: "Roboto", sans-serif;
+$color: (
+  dark: #2f374c,
+  medium: darken(#7db2f6, 20%),
+  light: lighten(#a8acb3, 16%),
+  action: #198754,
+  bodybgk: lighten(#a8acb3, 29%),
+);
+$font: (
+  L1: 3.5rem,
+  L2: 2.8rem,
+  L3: 2.4rem,
+  L4: 2rem,
+  L5: 1.45rem,
+  M1: 1.32rem,
+  M2: 1.25rem,
+  M3: 1.18rem,
+  M4: 1.1rem,
+  M5: 1.07rem,
+  S: 1.03rem,
+);
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1201px,
+);
+/* .....................................variables.............................................  */
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+body {
+  min-height: 100vh;
+  // position: relative;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  background-color: map-get($color, bodybgk);
+  font-family: $main-font;
+}
+ul,
+ol,
+li {
+  list-style: none;
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+/* ..................................mixin...............................................  */
+@mixin btnselector() {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.8rem;
+  text-align: start;
+  font-size: map-get($font, Small);
+  font-weight: bold;
+}
+@mixin menu() {
+  position: absolute;
+  display: none;
+  width: 100%;
+  top: 110%;
+  border: none;
+}
+/* .................................................................................  */
+// .main-cv {
+//   display: flex;
+//   margin: 2rem 0;
+// }
+.cv {
+  outline: 1px solid map-get($color, light);
+  background-color: map-get($color, bodybgk);
+  width: 50%;
+  margin: 2rem auto;
+  @media screen and (max-width: map-get($breakpoints, xl)) {
+    width: 70%;
+    margin: 2rem auto;
+  }
+  @media screen and (max-width: map-get($breakpoints, md)) {
+    width: 90%;
+    margin: 2rem auto;
+  }
+  &__block {
+    // border: 1px solid yellow;
+    display: flex;
+    align-items: center;
+  }
+  &__header {
+    // padding-top: 3rem;
+    padding-left: 2rem;
+    transform: translate(0, 50%);
+    text-transform: capitalize;
+    &-head {
+      font-size: map-get($font, L4);
+      color: map-get($color, dark);
+      font-weight: 800;
+      @media screen and (max-width: map-get($breakpoints, lg)) {
+        font-size: map-get($font, l5);
+      }
+      @media screen and (max-width: map-get($breakpoints, md-fix)) {
+        font-size: map-get($font, M1);
+      }
+      @media screen and (max-width: map-get($breakpoints, sm)) {
+        font-size: map-get($font, M2);
+      }
+    }
+    &-text {
+      font-size: map-get($font, M2);
+      color: map-get($color, medium);
+      font-weight: 600;
+      text-align: center;
+    }
+  }
+  &__card {
+    width: 35%;
+    // margin: 0 auto;
+    padding-left: 2rem;
+    padding-top: 1rem;
+    &-info {
+      // border: 0.1rem solid map-get($color, light);
+      position: relative;
+    }
+    &-wraper {
+      // border: 2px solid dodgerblue;
+      margin: 0;
+      position: relative;
+      padding-bottom: 100%;
+    }
+    &-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      object-fit: cover;
+      object-position: center center;
+      width: 100%;
+      height: 100%;
+      border-radius: 1.5rem;
+      // width - height >> cover دول خاصين بال
+    }
+  }
+  &__title {
+    padding: 2.5rem 1.5rem 0rem 2rem;
+    &-header {
+      text-transform: capitalize;
+      font-size: map-get($font, L4);
+      color: map-get($color, dark);
+      font-weight: 800;
+      border-bottom: 0.1rem solid map-get($color, light);
+      @media screen and (max-width: map-get($breakpoints, lg)) {
+        font-size: map-get($font, l5);
+      }
+      @media screen and (max-width: map-get($breakpoints, md-fix)) {
+        font-size: map-get($font, M1);
+      }
+      @media screen and (max-width: map-get($breakpoints, sm)) {
+        font-size: map-get($font, M2);
+      }
+    }
+  }
+}
+
+.about-intro {
+  padding: 0.5rem 1rem;
+  text-align: justify;
+  font-size: map-get($font, M5);
+  color: map-get($color, dark);
+  font-weight: 500;
+}
+.contact {
+  padding: 0.5rem 1rem;
+  &__item {
+    display: flex;
+    align-items: baseline;
+  }
+  &__icon {
+    font-size: map-get($font, M3);
+    color: map-get($color, action);
+    font-weight: 800;
+    font-weight: 800;
+  }
+  &__text {
+    padding-left: 1rem;
+    font-size: map-get($font, M5);
+    color: map-get($color, dark);
+    font-weight: 500;
+    &--capitalize {
+      text-transform: capitalize;
+    }
+    &--link {
+      display: block;
+      text-decoration: underline;
+      &:hover {
+        // font-size: map-get($font, M3);
+        color: map-get($color, medium);
+      }
+    }
+  }
+}
+.education {
+  &__item {
+    // border: 1px solid tan;
+    position: relative;
+    padding-left: 2rem;
+    &::before {
+      position: absolute;
+      content: "";
+      border: 0.1rem solid map-get($color, light);
+      /* Here I used em uint  */
+      padding: 2rem 0;
+      top: 1.5rem;
+      left: 0.8rem;
+    }
+    &-year {
+      font-size: map-get($font, M4);
+      color: map-get($color, action);
+      font-weight: 800;
+      padding-top: 1rem;
+    }
+    &-degree {
+      font-size: map-get($font, M4);
+      color: map-get($color, dark);
+      line-height: 0.1rem;
+      font-weight: 800;
+      @media screen and (max-width: map-get($breakpoints, md)) {
+        font-size: map-get($font, M5);
+        line-height: 1rem;
+      }
+    }
+    &-place {
+      font-size: map-get($font, M5);
+      color: map-get($color, medium);
+      font-weight: 800;
+      text-transform: capitalize;
+      @media screen and (max-width: map-get($breakpoints, md)) {
+        font-size: map-get($font, M5);
+        line-height: 1rem;
+      }
+    }
+  }
+}
+.experience-postion {
+  font-size: map-get($font, M4);
+  color: map-get($color, dark);
+  text-transform: capitalize;
+  line-height: 0.1rem;
+  font-weight: 800;
+  @media screen and (max-width: map-get($breakpoints, md)) {
+    font-size: map-get($font, M5);
+    line-height: 1.4rem;
+  }
+}
+.skills {
+  &-item {
+    padding-left: 2rem;
+  }
+  &-text {
+    font-size: map-get($font, M4);
+    color: map-get($color, dark);
+    font-weight: 500;
+  }
+  &-icon {
+    color: map-get($color, action);
+    padding-right: 1rem;
+    // font-weight: 500;
+  }
+}

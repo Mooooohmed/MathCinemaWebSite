@@ -1,0 +1,281 @@
+/* .....................................variables.............................................  */
+$main-font: "Roboto", sans-serif;
+$color: (
+  dark: #2f374c,
+  medium: darken(#7db2f6, 20%),
+  light: lighten(#a8acb3, 16%),
+  action: #198754,
+  bodybgk: lighten(#a8acb3, 29%),
+);
+$font: (
+  Large: 1.33rem,
+  Medium: 1.26rem,
+  Small: 1.08rem,
+);
+$breakpoints: (
+  sm: 576px,
+  sm-fix: 660px,
+  md: 768px,
+  md-fix: 855px,
+  lg: 992px,
+  lg-fix: 1052px,
+  xl: 1201px,
+  xl-fix: 1300px,
+);
+/* .....................................variables.............................................  */
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+body {
+  // min-height: 100vh;
+  // position: relative;
+  // display: flex;
+  // flex-direction: column;
+  font-size: 16px;
+  background-color: map-get($color, bodybgk);
+  font-family: $main-font;
+}
+ul,
+ol,
+li {
+  list-style: none;
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+/* ..................................mixin...............................................  */
+@mixin btnselector() {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.8rem;
+  text-align: start;
+  font-size: map-get($font, Small);
+  font-weight: bold;
+}
+@mixin menu() {
+  position: absolute;
+  display: none;
+  width: 100%;
+  top: 110%;
+  border: none;
+}
+/* .................................................................................  */
+.main-page {
+  // flex-grow: 1;
+  display: flex;
+  margin-top: 4rem;
+  @media screen and (max-width: map-get($breakpoints, xl-fix)) {
+    // flex-direction: column;
+    flex-direction: column-reverse;
+    // & :nth-child(2) {
+    //   order: -1;
+    // }  /// Ask ?? لما استخدمت الاوردر اتجاه الكلام اتعكس
+  }
+}
+.course-container {
+  // border: 2px solid red;
+  margin: 0 4%;
+  width: 65%;
+  margin-left: 5%;
+  @media screen and (max-width: map-get($breakpoints, xl-fix)) {
+    margin: 0 auto;
+    width: 63%;
+  }
+}
+.advertising {
+  width: 35%;
+  height: 100vh;
+  position: relative;
+  background-color: yellow;
+  @media screen and (max-width: map-get($breakpoints, xl-fix)) {
+    margin: 0 auto;
+    width: 63%;
+    margin-top: 3rem;
+  }
+}
+.header {
+  color: map-get($color, dark);
+  font-size: map-get($color, Large);
+  position: relative;
+  margin: 0rem 0 3.5rem 0;
+  padding-top: 2.4rem; // margin-top will make y-scroll because there is no div above h1
+  //  (empty div) will not fix the problem
+}
+.line-break::before {
+  position: absolute;
+  content: "";
+  border: 0.2rem solid map-get($color, medium);
+  padding: 0 8rem;
+  top: 110%;
+  left: 50%;
+  transform: translate(-50%, 15%);
+}
+.stages,
+.grades,
+.select-term {
+  position: relative;
+  border: none;
+}
+// .........................................
+.stages {
+  outline: 0.2rem solid map-get($color, dark);
+  &__btn {
+    @include btnselector;
+    color: map-get($color, dark);
+    background-color: map-get($color, light);
+    border: none;
+  }
+  &__btn--defualt {
+    outline: 0.2rem solid map-get($color, dark);
+    background-color: map-get($color, light);
+    border: none;
+  }
+  &__text {
+    font-size: map-get($font, Medium);
+    color: map-get($color, dark);
+  }
+  &__menu {
+    @include menu;
+    outline: 2px solid map-get($color, light);
+    z-index: 1;
+  }
+  &__menu &__btn:hover {
+    background-color: map-get($color, medium);
+    color: map-get($color, dark);
+  }
+}
+// ---------------------------------------------------------------------------------
+.grades-container {
+  @media screen and (max-width: map-get($breakpoints, xl)) {
+    padding-top: 1.5rem;
+  }
+  @media screen and (max-width: map-get($breakpoints, lg)) {
+    padding-top: 0.8rem;
+  }
+}
+.grades-block {
+  margin: 0 1rem;
+  @media screen and (max-width: map-get($breakpoints, xl)) {
+    margin: 0;
+  }
+}
+.grades {
+  outline: 0.2rem solid map-get($color, dark);
+  &__btn {
+    @include btnselector;
+    color: map-get($color, dark);
+    background-color: map-get($color, light);
+  }
+  &__btn--defualt {
+    background-color: map-get($color, light);
+  }
+  &__text {
+    font-size: map-get($font, Medium);
+    color: map-get($color, dark);
+  }
+  &__menu-prim,
+  &__menu-prep,
+  &__menu-sec {
+    @include menu;
+    outline: 2px solid map-get($color, light);
+    z-index: 1;
+  }
+  &__menu-prim {
+    height: 150px;
+    overflow-y: scroll;
+    // scrollbar-color: red yellow;
+    // scrollbar-width: thin;
+  }
+  &__menu-prim &__btn:hover,
+  &__menu-prep &__btn:hover,
+  &__menu-sec &__btn:hover {
+    background-color: map-get($color, medium);
+    color: map-get($color, dark);
+  }
+}
+// ---------------------------------------------------------------------------------
+.select-term-container {
+  @media screen and (max-width: map-get($breakpoints, xl)) {
+    padding-top: 1.5rem;
+  }
+  @media screen and (max-width: map-get($breakpoints, lg)) {
+    padding-top: 0.8rem;
+  }
+}
+.select-term {
+  outline: 0.2rem solid map-get($color, dark);
+  &__btn {
+    @include btnselector();
+    color: map-get($color, dark);
+    background-color: map-get($color, light);
+  }
+  &__btn--defualt {
+    background-color: map-get($color, light);
+  }
+  &__text {
+    font-size: map-get($font, Medium);
+    color: map-get($color, color-3);
+  }
+  &__menu {
+    @include menu();
+    outline: 2px solid map-get($color, light);
+    z-index: 1;
+  }
+  &__menu &__btn:hover {
+    background-color: map-get($color, medium);
+    color: map-get($color, dark);
+  }
+}
+.final-course {
+  margin: 1.7rem 0;
+  padding-top: 2.5rem;
+  .btn {
+    // border: 2px solid red;
+    background-color: map-get($color, light);
+    display: block;
+    // width: fit-content;
+    text-align: center;
+    font-size: map-get($font, Large);
+    font-weight: bold;
+    color: map-get($color, dark);
+    // border: 2px solid lightpink;
+    box-shadow: 0.35rem 0.35rem map-get($color, medium);
+    &:hover {
+      background-color: map-get($color, action);
+      color: white;
+    }
+    &:active {
+      color: black;
+    }
+  }
+}
+.modal {
+  &__btn {
+    margin: 0 auto;
+    &:hover {
+      background-color: map-get($color, action) !important;
+    }
+  }
+  &__head {
+    color: map-get($color, dark);
+  }
+  &__text {
+    color: map-get($color, medium);
+  }
+}
+
+// --------------------------------------------------------------
+.active {
+  display: block !important;
+}
+.fade {
+  opacity: 0.4 !important;
+  transform: scale(0.981);
+}

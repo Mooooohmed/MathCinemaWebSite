@@ -1,0 +1,729 @@
+/* .....................................variables.............................................  */
+$main-font: "Roboto", sans-serif;
+$color: (
+  dark: #2f374c,
+  medium: darken(#7db2f6, 20%),
+  light: lighten(#a8acb3, 16%),
+  action: #198754,
+  bodybgk: lighten(#a8acb3, 29%),
+);
+$font: (
+  L1: 3.5rem,
+  L2: 2.8rem,
+  L3: 2.4rem,
+  L4: 2rem,
+  L5: 1.45rem,
+  M1: 1.32rem,
+  M2: 1.25rem,
+  M3: 1.18rem,
+  M4: 1.1rem,
+  M5: 1.07rem,
+  S: 1.03rem,
+);
+$breakpoints: (
+  sm: 576px,
+  sm-fix: 660px,
+  sm-fix2: 675px,
+  md: 768px,
+  md-fix: 855px,
+  lg: 992px,
+  lg-fix: 1052px,
+  xl: 1201px,
+  xl-fix: 1300px,
+  // xxl:1359px,
+);
+/* .....................................variables.............................................  */
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+body {
+  min-height: 100vh;
+  // position: relative;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  font-family: $main-font;
+  background-color: map-get($color, bodybgk);
+}
+ul,
+ol,
+li {
+  list-style: none;
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  color: inherit;
+  background-color: inherit;
+  display: block;
+  width: 100%;
+}
+h1,
+h1,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+/* .................................................................................  */
+.staff {
+  &__header {
+    padding: 3.5rem 0 4rem 0;
+    // z-index: 1;
+    // border: 0.5rem solid #cf873b;
+  }
+  &__head {
+    color: map-get($color, dark);
+    display: inline;
+    font-size: map-get($font, L4);
+    text-transform: capitalize;
+    font-weight: 750;
+    padding: 0 2.2rem 1rem 2.2rem;
+    border-bottom: 0.3rem solid map-get($color, dark);
+  }
+  &__envelope {
+    // border: yellow solid 2px;
+    // @media screen and (max-width: map-get($breakpoints, lg)) {
+    //   text-align: center;
+    // }
+    // border: 2px solid salmon;
+    // position: relative;
+    // position: sticky;
+    // top: 0;
+    // z-index: 1;
+    // background-color: map-get($color, bodybgk);
+    // padding-bottom: 1rem;
+  }
+  &__filter {
+    // border: yellow solid 2px;
+    position: relative;
+    // border: palevioletred solid 2px;
+    // margin: 0 auto;
+    // display: flex;
+    // justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr 1.5fr 1fr;
+    gap: 1rem;
+    // column-gap: 1.5rem;
+    margin-bottom: 2rem;
+    @media screen and (max-width: map-get($breakpoints, xl)) {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 0.8rem;
+      row-gap: 1.5rem;
+    }
+    @media screen and (max-width: map-get($breakpoints, sm)) {
+      grid-template-columns: 1fr;
+    }
+    &-tab {
+      // border: palevioletred solid 2px;
+      @media screen and (max-width: map-get($breakpoints, xl)) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+      @media screen and (max-width: map-get($breakpoints, lg-fix)) {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+      @media screen and (max-width: map-get($breakpoints, sm)) {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    &-divider::before {
+      position: absolute;
+      content: "";
+      border: 0.1rem solid map-get($color, light);
+      padding: 0 32%;
+      top: 175%;
+      left: 50%;
+      transform: translate(-50%, 15%);
+      @media screen and (max-width: map-get($breakpoints, lg-fix)) {
+        top: 130%;
+      }
+    }
+    &-title {
+      // border: yellow solid 2px;
+      display: block;
+      color: map-get($color, medium);
+      font-size: map-get($font, L5);
+      font-weight: 750;
+      @media screen and (max-width: map-get($breakpoints, lg)) {
+      }
+      @media screen and (max-width: map-get($breakpoints, sm)) {
+        font-size: map-get($font, M2);
+      }
+      &--action {
+        color: map-get($color, action);
+        // border: green solid 2px;
+      }
+      &--dark {
+        color: map-get($color, dark);
+        // border: yellow solid 2px;
+      }
+      &--medium {
+        color: map-get($color, medium);
+      }
+      &--mark {
+        text-decoration: line-through;
+      }
+    }
+    &-btn {
+      color: rgba(map-get($color, medium), 0.5);
+      font-size: map-get($font, M1);
+      font-weight: 750;
+      border: 1px solid map-get($color, medium);
+      width: 15rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      &--color {
+        color: rgba(map-get($color, action), 0.4);
+        border: 1px solid map-get($color, action);
+      }
+    }
+    &-cities,
+    &-services {
+      position: absolute;
+      top: 106%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      outline: 1px solid map-get($color, light);
+      height: 11rem;
+      overflow-y: scroll;
+      background-color: map-get($color, bodybgk);
+      z-index: 10;
+    }
+    &-services {
+      position: absolute;
+      top: 106%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      outline: 1px solid map-get($color, light);
+      height: 11rem;
+      background-color: map-get($color, bodybgk);
+      z-index: 10;
+    }
+    //   position: absolute;
+    //   top: 106%;
+    //   bottom: 0;
+    //   left: 0;
+    //   // right: 26%;
+    //   outline: 1px solid map-get($color, light);
+    //   height: 11rem;
+    //   // overflow-y: scroll;
+    //   background-color: map-get($color, bodybgk);
+    //   z-index: 10;
+    //   // padding: 0 2rem;
+    //   // position: absolute;
+    //   // min-height: fit-content;
+    //   // width: 40rem;
+    //   // top: 106%;
+    //   // bottom: 0;
+    //   // left: -35%;
+    //   // right: -35%;
+    //   // outline: 1px solid map-get($color, light);
+    //   // // display: flex;
+    //   // // justify-content: space-around;
+    //   // // display: grid;
+    //   // // grid-template-columns: 1.1fr repeat(2, 0.7fr) 1.3fr 1.3fr;
+    //   // // column-gap: 0.3rem;
+    //   // background-color: map-get($color, bodybgk);
+    // }
+  }
+  &__city-item,
+  &__service-item {
+    text-align: center;
+    font-size: map-get($font, M3);
+    font-weight: 450;
+  }
+  &__city-name:hover button {
+    color: map-get($color, medium);
+    font-size: map-get($font, M3);
+    font-weight: 700;
+  }
+  &__city-item {
+    text-align: left;
+    font-size: map-get($font, M3);
+    font-weight: 450;
+  }
+  &__service-name:hover button {
+    color: map-get($color, action);
+    font-size: map-get($font, M3);
+    font-weight: bold;
+  }
+  &__title-head {
+    margin: 6.5rem 0 3rem 0;
+  }
+  &__title {
+    color: map-get($color, dark);
+    display: inline;
+    font-size: map-get($font, L4);
+    text-transform: capitalize;
+    font-weight: 750;
+    border-bottom: 0.3rem solid map-get($color, action);
+  }
+  &__number {
+    color: map-get($color, dark);
+    font-size: map-get($font, L4);
+    font-weight: 750;
+    border: solid map-get($color, dark) 0.2rem;
+    border-radius: 10%;
+  }
+  &__solid-icon {
+    color: map-get($color, action);
+    font-size: map-get($font, L4);
+    font-weight: 700;
+  }
+  &__search {
+    &-icon {
+      font-size: map-get($font, M2);
+      font-weight: 750;
+      @media screen and (max-width: map-get($breakpoints, sm)) {
+        font-size: map-get($font, M3);
+      }
+      &--dark {
+        color: map-get($color, dark);
+      }
+      &--medium {
+        color: map-get($color, medium);
+      }
+      &--action {
+        color: map-get($color, action);
+      }
+    }
+    &-input {
+      outline: 0.1rem solid map-get($color, dark);
+      width: 16rem;
+      font-size: map-get($font, M3);
+      color: map-get($color, dark);
+    }
+    &-input:focus {
+      outline: 0.2rem solid map-get($color, light);
+      color: map-get($color, dark);
+    }
+  }
+  &__aside {
+    // border: 2px solid goldenrod;
+    float: left;
+    width: 20%;
+    position: sticky;
+    height: 100vh;
+    top: 0;
+    background-color: map-get($color, bodybgk);
+    outline: 0.1rem solid map-get($color, light);
+    // overflow-y: scroll;
+    @media screen and (max-width: map-get($breakpoints, lg-fix)) {
+      width: 25%;
+    }
+    @media screen and (max-width: map-get($breakpoints, sm-fix2)) {
+      width: 38%;
+    }
+    &-head {
+      text-transform: capitalize;
+      background-color: map-get($color, medium);
+      padding: 1rem 0.8rem;
+      font-size: map-get($font, L5);
+      @media screen and (max-width: map-get($breakpoints, lg-fix)) {
+        font-size: map-get($font, M2);
+      }
+      @media screen and (max-width: map-get($breakpoints, lg)) {
+        font-size: map-get($font, M3);
+      }
+      @media screen and (max-width: map-get($breakpoints, md-fix)) {
+        font-size: map-get($font, M4);
+      }
+      font-weight: 700;
+      color: white;
+    }
+  }
+  &__accordion {
+    background-color: map-get($color, light);
+    border-bottom: 0.1rem solid map-get($color, bodybgk);
+    opacity: 0.7;
+    &--gender,
+    &--area {
+      text-transform: capitalize;
+      color: map-get($color, dark);
+      font-size: map-get($font, M2);
+      @media screen and (max-width: map-get($breakpoints, lg)) {
+        font-size: map-get($font, M3);
+      }
+      @media screen and (max-width: map-get($breakpoints, md-fix)) {
+        font-size: map-get($font, M4);
+      }
+      font-weight: 600;
+      padding: 1.1rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+    &-content {
+      display: none;
+      padding: 1.1rem 1rem;
+      border-bottom: 0.1rem solid map-get($color, light);
+      background-color: map-get($color, bodybgk);
+      &--area {
+        overflow-y: scroll;
+        height: 40vh;
+      }
+    }
+    &-input {
+      width: 1rem;
+      height: 1rem;
+      cursor: pointer;
+    }
+    &-label {
+      color: map-get($color, medium);
+      font-size: map-get($font, M4);
+      font-weight: 600;
+      text-transform: capitalize;
+      padding-left: 0.8rem;
+      cursor: pointer;
+      &--area {
+        font-size: map-get($font, M4);
+        // color: map-get($color, medium);
+      }
+    }
+  }
+  // &__lock{    overflow-x: hidden;}
+  &__teachers {
+    // الدور
+    // border: 2px solid red;
+    float: left;
+    width: 80%;
+    @media screen and (max-width: map-get($breakpoints, lg-fix)) {
+      width: 75%;
+    }
+    @media screen and (max-width: map-get($breakpoints, sm-fix2)) {
+      width: 62%;
+    }
+  }
+  &__list {
+    // الشقة
+    // border: 2px solid yellow;
+    // overflow: hidden;
+    // margin: 0 -2.5rem;
+    // margin-top: 0rem;
+    // display: grid;
+    // grid-template-columns: repeat(2, 1fr);
+    // column-gap: 8rem;
+    margin-left: 3rem;
+    @media screen and (max-width: map-get($breakpoints, sm-fix2)) {
+      margin-left: 1rem;
+    }
+  }
+  &__card {
+    // border: 2px solid green;
+    // display: grid;
+    // grid-template-columns: repeat(1fr);
+    // column-gap: 0rem;
+
+    margin-bottom: 4rem;
+  }
+  &__info {
+    border: 0.1rem solid map-get($color, light);
+    // outline:0.1rem solid map-get($color, light) ;
+    border-radius: 1.5rem;
+    position: relative;
+    display: grid;
+    // grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1.3fr 1.8fr;
+    @media screen and (max-width: map-get($breakpoints, xl-fix)) {
+      grid-template-columns: 0.9fr 1fr 1.8fr;
+    }
+    @media screen and (max-width: map-get($breakpoints, xl)) {
+      grid-template-columns: 1.2fr 1.2fr 1fr;
+    }
+    @media screen and (max-width: map-get($breakpoints, lg-fix)) {
+      grid-template-columns: 1fr 1.4fr;
+    }
+    @media screen and (max-width: map-get($breakpoints,sm-fix2)) {
+      grid-template-columns: 100%;
+    }
+    &:hover {
+      background-color: map-get($color, light);
+    }
+  }
+  &__wraper {
+    // border: 2px solid dodgerblue;
+    display: block;
+    margin: 0;
+    position: relative;
+    padding-bottom: 70%;
+    @media screen and (max-width: map-get($breakpoints, sm-fix2)) {
+      width: 80%;
+      margin: 0 auto;
+      padding-bottom: 60%;
+    }
+  }
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+    object-position: center center;
+    width: 100%;
+    height: 100%;
+    border-radius: 1.5rem;
+    // width - height >> cover دول خاصين بال
+  }
+  // &__curtain {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   background-color: map-get($color, light);
+  //   opacity: 0;
+  // }
+  &__caption {
+    // border: 2px solid green;
+    display: block;
+    margin-left: 0.8rem;
+    @media screen and (max-width: map-get($breakpoints, sm-fix2)) {
+      margin-left: 0;
+    }
+  }
+  // &__member:hover &__curtain {
+  //   opacity: 0.5;
+  // }
+  // &__member:hover &__visit {
+  //   transform: scale(1.2);
+  // }
+  &__name {
+    color: map-get($color, dark);
+    text-transform: capitalize;
+    font-size: map-get($font, M2);
+    font-weight: 600;
+    @media screen and (max-width: map-get($breakpoints, sm-fix2)) {
+      font-size: map-get($font, M3);
+    }
+  }
+  &__address {
+    // border: 2px solid tan;
+    color: map-get($color, medium);
+    text-transform: capitalize;
+    font-size: map-get($font, M);
+    font-weight: 600;
+    margin: 0;
+    @media screen and (max-width: map-get($breakpoints, sm-fix2)) {
+      font-size: map-get($font, M4);
+    }
+  }
+  &__state {
+    // border: 2px solid tan;
+    color: map-get($color, action);
+    text-transform: capitalize;
+    font-size: map-get($font, M3);
+    font-weight: 600;
+    margin: 0;
+    @media screen and (max-width: map-get($breakpoints, sm-fix2)) {
+      font-size: map-get($font, M4);
+    }
+  }
+  &__visit {
+    // border: 2px solid cadetblue;
+    // position: absolute;
+    // width: 100%;
+    // top: 50%;
+    // transform: translateY(-50%);
+    @media screen and (max-width: map-get($breakpoints, lg-fix)) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+    @media screen and (max-width: map-get($breakpoints,sm-fix2)) {
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
+    &-group {
+      display: grid;
+      padding: 4rem 0;
+      grid-template-columns: 1.8fr 2fr 0.4fr;
+      align-items: baseline;
+      @media screen and (max-width: map-get($breakpoints, xl)) {
+        grid-template-columns: 90% 10%;
+        padding: 1rem 0;
+      }
+      @media screen and (max-width: map-get($breakpoints,lg-fix)) {
+        grid-template-columns: 1.8fr 2fr 0.4fr;
+      }
+      @media screen and (max-width: map-get($breakpoints, sm-fix2)) {
+        grid-template-columns: 80% 20%;
+        padding: 1rem 0;
+        // width: 70%;
+        // margin: 0 auto;
+        // grid-template-columns: 100%;
+        // text-align: center;
+      }
+    }
+    &-mark {
+      // background: #000;
+      width: fit-content;
+      display: block;
+      font-size: map-get($font, M2);
+      margin-left: 0.7rem;
+      cursor: pointer;
+      @media screen and (max-width: map-get($breakpoints, xl)) {
+        margin-left: 0;
+        padding-right: 0.1rem;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 0;
+        grid-row-end: 1;
+      }
+      @media screen and (max-width: map-get($breakpoints, lg-fix)) {
+        grid-column-start: 3;
+        grid-column-end: 4;
+      }
+      @media screen and (max-width: map-get($breakpoints, sm-fix2)) {
+        margin-left: 0;
+        // padding: 1rem;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 0;
+        grid-row-end: 1;
+      }
+    }
+    &-btn {
+      display: block;
+      font-size: map-get($font, M3);
+      margin-left: 0.5rem;
+      font-weight: 600;
+      width: fit-content;
+      padding: 0.4rem 2.5rem;
+      @media screen and (max-width: map-get($breakpoints, xl)) {
+        margin-top: 2rem;
+      }
+      @media screen and (max-width: map-get($breakpoints, sm-fix2)) {
+        margin-left: 0;
+        margin: 0.6rem 0;
+      }
+      &--whatsapp {
+        @media screen and (max-width: map-get($breakpoints, xl)) {
+          width: 90%;
+          grid-column-start: 1;
+          grid-column-end: 4;
+        }
+        @media screen and (max-width: map-get($breakpoints, lg-fix)) {
+          width: fit-content;
+          grid-column-start: 2;
+          grid-column-end: 3;
+        }
+        @media screen and (max-width: map-get($breakpoints, sm-fix2)) {
+          margin: 0.6rem 0;
+          width: 100%;
+          grid-column-start: 1;
+          grid-column-end: 4;
+        }
+      }
+      &--margin {
+        border-color: map-get($color, medium);
+        color: map-get($color, medium);
+        margin-left: 0.7rem;
+        &:hover {
+          background-color: map-get($color, medium);
+        }
+      }
+    }
+  }
+  &__pagintaion {
+    margin-left: 4rem;
+    margin-top: 3.5rem;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    column-gap: 1.5rem;
+    &-item {
+      font-size: map-get($font, M4);
+      font-weight: 600;
+      padding: 0.4rem 0;
+      background-color: map-get($color, light);
+      border: 0.1rem dotted map-get($color, dark);
+      cursor: pointer;
+      &--defualt {
+        color: white;
+        background-color: map-get($color, medium);
+      }
+      &:hover {
+        background-color: white;
+        color: map-get($color, dark);
+      }
+    }
+  }
+}
+.clear-fix {
+  clear: both;
+}
+.inactive,
+.unactive,
+.notactive,
+.disactive,
+.diactivated,
+.shutdown, // >>>>>> pagination
+.closedown,.freez {
+  display: none !important;
+}
+// كلهم حاجة واحدة و لكن بيتم اضافتهم من طرق مختلفة في الجاف اسكربت
+
+// ....................................................
+// ....................................................
+// ....................................................
+/* The theme__switch - the box around the slider */
+.theme {
+  &__switch {
+    // border: pink 2px solid;
+    position: relative;
+    display: inline-block;
+    width: 10rem;
+    height: 2rem;
+  }
+  &__slider {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    background-color: map-get($color, light);
+    transition: 0.4s;
+    border-radius: 3rem;
+    outline: none;
+    &:before {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 15%;
+      transform: translate(-50%, -50%);
+      //make a circle//
+      height: 1.5rem;
+      width: 1.5rem;
+      border-radius: 50%;
+      background-color: map-get($color, bodybgk);
+      transition: 0.4s;
+    }
+  }
+  &__input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+}
+input:checked + .theme__slider {
+  background-color: map-get($color, action);
+}
+
+input:checked + .theme__slider::before {
+  left: calc(100% - 15%);
+  background-color: map-get($color, dark);
+}

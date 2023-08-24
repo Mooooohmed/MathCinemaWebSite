@@ -1,0 +1,272 @@
+/* .....................................variables.............................................  */
+/* .....................................variables.............................................  */
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+body {
+  font-size: 16px;
+  background-color: #f7f7f8;
+  font-family: "Roboto", sans-serif;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ..................................mixin...............................................  */
+/* .................................................................................  */
+.main-page {
+  display: flex;
+  margin-top: 4rem;
+}
+@media screen and (max-width: 1300px) {
+  .main-page {
+    flex-direction: column-reverse;
+  }
+}
+
+.course-container {
+  margin: 0 4%;
+  width: 65%;
+  margin-left: 5%;
+}
+@media screen and (max-width: 1300px) {
+  .course-container {
+    margin: 0 auto;
+    width: 63%;
+  }
+}
+
+.advertising {
+  width: 35%;
+  height: 100vh;
+  position: relative;
+  background-color: yellow;
+}
+@media screen and (max-width: 1300px) {
+  .advertising {
+    margin: 0 auto;
+    width: 63%;
+    margin-top: 3rem;
+  }
+}
+
+.header {
+  color: #2f374c;
+  position: relative;
+  margin: 0rem 0 3.5rem 0;
+  padding-top: 2.4rem;
+}
+
+.line-break::before {
+  position: absolute;
+  content: "";
+  border: 0.2rem solid #1e79ef;
+  padding: 0 8rem;
+  top: 110%;
+  left: 50%;
+  transform: translate(-50%, 15%);
+}
+
+.stages,
+.grades,
+.select-term {
+  position: relative;
+  border: none;
+}
+
+.stages {
+  outline: 0.2rem solid #2f374c;
+}
+.stages__btn {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.8rem;
+  text-align: start;
+  font-size: 1.08rem;
+  font-weight: bold;
+  color: #2f374c;
+  background-color: #d4d6d9;
+  border: none;
+}
+.stages__btn--defualt {
+  outline: 0.2rem solid #2f374c;
+  background-color: #d4d6d9;
+  border: none;
+}
+.stages__text {
+  font-size: 1.26rem;
+  color: #2f374c;
+}
+.stages__menu {
+  position: absolute;
+  display: none;
+  width: 100%;
+  top: 110%;
+  border: none;
+  outline: 2px solid #d4d6d9;
+  z-index: 1;
+}
+.stages__menu .stages__btn:hover {
+  background-color: #1e79ef;
+  color: #2f374c;
+}
+
+@media screen and (max-width: 1201px) {
+  .grades-container {
+    padding-top: 1.5rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .grades-container {
+    padding-top: 0.8rem;
+  }
+}
+
+.grades-block {
+  margin: 0 1rem;
+}
+@media screen and (max-width: 1201px) {
+  .grades-block {
+    margin: 0;
+  }
+}
+
+.grades {
+  outline: 0.2rem solid #2f374c;
+}
+.grades__btn {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.8rem;
+  text-align: start;
+  font-size: 1.08rem;
+  font-weight: bold;
+  color: #2f374c;
+  background-color: #d4d6d9;
+}
+.grades__btn--defualt {
+  background-color: #d4d6d9;
+}
+.grades__text {
+  font-size: 1.26rem;
+  color: #2f374c;
+}
+.grades__menu-prim, .grades__menu-prep, .grades__menu-sec {
+  position: absolute;
+  display: none;
+  width: 100%;
+  top: 110%;
+  border: none;
+  outline: 2px solid #d4d6d9;
+  z-index: 1;
+}
+.grades__menu-prim {
+  height: 150px;
+  overflow-y: scroll;
+}
+.grades__menu-prim .grades__btn:hover, .grades__menu-prep .grades__btn:hover, .grades__menu-sec .grades__btn:hover {
+  background-color: #1e79ef;
+  color: #2f374c;
+}
+
+@media screen and (max-width: 1201px) {
+  .select-term-container {
+    padding-top: 1.5rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .select-term-container {
+    padding-top: 0.8rem;
+  }
+}
+
+.select-term {
+  outline: 0.2rem solid #2f374c;
+}
+.select-term__btn {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.8rem;
+  text-align: start;
+  font-size: 1.08rem;
+  font-weight: bold;
+  color: #2f374c;
+  background-color: #d4d6d9;
+}
+.select-term__btn--defualt {
+  background-color: #d4d6d9;
+}
+.select-term__text {
+  font-size: 1.26rem;
+}
+.select-term__menu {
+  position: absolute;
+  display: none;
+  width: 100%;
+  top: 110%;
+  border: none;
+  outline: 2px solid #d4d6d9;
+  z-index: 1;
+}
+.select-term__menu .select-term__btn:hover {
+  background-color: #1e79ef;
+  color: #2f374c;
+}
+
+.final-course {
+  margin: 1.7rem 0;
+  padding-top: 2.5rem;
+}
+.final-course .btn {
+  background-color: #d4d6d9;
+  display: block;
+  text-align: center;
+  font-size: 1.33rem;
+  font-weight: bold;
+  color: #2f374c;
+  box-shadow: 0.35rem 0.35rem #1e79ef;
+}
+.final-course .btn:hover {
+  background-color: #198754;
+  color: white;
+}
+.final-course .btn:active {
+  color: black;
+}
+
+.modal__btn {
+  margin: 0 auto;
+}
+.modal__btn:hover {
+  background-color: #198754 !important;
+}
+.modal__head {
+  color: #2f374c;
+}
+.modal__text {
+  color: #1e79ef;
+}
+
+.active {
+  display: block !important;
+}
+
+.fade {
+  opacity: 0.4 !important;
+  transform: scale(0.981);
+}/*# sourceMappingURL=style.css.map */

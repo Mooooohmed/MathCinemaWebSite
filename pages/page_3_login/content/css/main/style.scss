@@ -1,0 +1,166 @@
+/* .....................................variables.............................................  */
+$main-font: "Roboto", sans-serif;
+$color: (
+  dark: #2f374c,
+  medium: darken(#7db2f6, 20%),
+  light: lighten(#a8acb3, 16%),
+  action: #198754,
+  bodybgk: lighten(#a8acb3, 29%),
+);
+$font: (
+  L1: 3.5rem,
+  L2: 2.8rem,
+  L3: 2.4rem,
+  L4: 2rem,
+  L5: 1.45rem,
+  M1: 1.32rem,
+  M2: 1.25rem,
+  M3: 1.18rem,
+  M4: 1.1rem,
+  M5: 1.07rem,
+  S: 1.03rem,
+);
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1201px,
+);
+/* .....................................variables.............................................  */
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+body {
+  min-height: 100vh;
+  // position: relative;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  background-color: map-get($color, bodybgk);
+  font-family: $main-font;
+}
+ul,
+ol,
+li {
+  list-style: none;
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+/* ..................................mixin...............................................  */
+@mixin btnselector() {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.8rem;
+  text-align: start;
+  font-size: map-get($font, Small);
+  font-weight: bold;
+}
+@mixin menu() {
+  position: absolute;
+  display: none;
+  width: 100%;
+  top: 110%;
+  border: none;
+}
+/* .................................................................................  */
+.login {
+  width:60%;
+  margin: 3rem auto;
+  @media screen and (max-width: map-get($breakpoints, lg)) {
+    width:70%;
+  }
+  @media screen and (max-width: map-get($breakpoints, md)) {
+    width:90%;
+  }
+  background-color: map-get($color, light);
+  border-radius: 1rem;
+  overflow: hidden;
+  &__header {
+    text-align: center;
+    text-transform: capitalize;
+    background-color: map-get($color, dark);
+  }
+  &__head {
+    font-size: map-get($font, L4);
+    color: white;
+  }
+  &__body {
+    // border: 2px solid red;
+    // width: 50%;
+    // margin: 1rem auto;
+    margin: 1rem 10%;
+  }
+  &__label {
+    padding: 2.5%;
+    display: block;
+    text-transform: capitalize;
+    font-size: map-get($font, M1);
+    font-weight: 600;
+    color: map-get($color, dark);
+    &--margin {
+      margin-top: 1rem;
+    }
+  }
+  &__input {
+    display: block;
+    margin: 0 auto;
+    padding: 0.5rem;
+    width: 97.5%;
+    height: 2.3rem;
+    font-size: map-get($font, M5);
+    color: map-get($color, dark);
+    outline: 0.15rem solid map-get($color, bodybgk);
+    &:focus {
+      outline: 0.15rem solid map-get($color, medium);
+    }
+  }
+  &__btn {
+    display: block;
+    margin: 2.5rem auto 1rem auto;
+    padding: 0.3rem 0.5rem;
+    width: 97.5%;
+    outline: 0.1rem solid map-get($color, dark);
+    border-radius: 1rem;
+    background-color: map-get($color, medium);
+    font-size: map-get($font, M2);
+    font-weight: 600;
+    color: white;
+    &:hover {
+      background-color: map-get($color, action);
+    }
+  }
+  &__line {
+    display: inline-block;
+    font-size: map-get($font, S);
+    color: map-get($color, medium);
+    font-weight: 700;
+    text-decoration: underline;
+    // border-bottom: 0.1rem solid map-get($color, dark);
+    text-transform: capitalize;
+    &:hover {
+      font-weight: 900;
+    }
+  }
+  &__signup {
+    font-size: map-get($font, S);
+    color: map-get($color, dark);
+    font-weight: 700;
+  }
+  &__link {
+    display: inline-block;
+    padding-left: 1rem;
+    text-decoration: underline;
+    color: map-get($color, action);
+    &:hover {
+      font-weight: 900;
+    }
+  }
+}

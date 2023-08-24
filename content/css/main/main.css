@@ -1,0 +1,174 @@
+:root {
+  --header-font: "Roboto", sans-serif;
+  /* --header-font-secondary: "Montserrat", sans-serif;
+  --header-top: 1.5rem;
+  --header-bottom: 1.2rem;
+  --color-bg-radial: radial-gradient(#525252, #131313);
+  --color-bg: #323232;
+  --color-primary: white;
+  --color-dark: black;
+  --color-signature: #f54538;
+  --color-signature: #f54538;*/
+  --font-L1: 3rem;
+  --font-L2: 2.8rem;
+  --font-L3: 2.4rem;
+  --font-M1: 1.56rem;
+  --font-M2: 1.25rem;
+  --font-M3: 1.1rem;
+  --font-S: 1rem;
+  /* --font-h2: 3.5rem;
+  --font-h3: 2.5rem;
+  --font-parg: 1.2rem;
+  --iframe-ratio: 56.25%; */
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  font-size: 16px;
+  font-family: var(--header-font);
+}
+ul,
+ol,
+li {
+  list-style: none;
+  display: block;
+  padding: 0;
+}
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+/* ..................................................................................  */
+.nav-container {
+  margin: 0 2%;
+}
+.nav__item {
+  padding: 0 0 0 0.3rem;
+  /* border: 2px teal solid; */
+}
+.nav__img {
+  /* border: 0.2rem rgba(252, 229, 112, 0.6) solid; */
+  /* border: 0.2rem rgba(214, 1, 1, 0.16) solid; */
+  display: block;
+  border-radius: 0 0.8rem 0 0.8rem;
+  width: 5.2rem;
+}
+.nav__header {
+  position: relative;
+  padding-left: 0.5rem;
+  word-wrap: break-word;
+  /* border: 5px greenyellow solid; */
+  font-weight: 700;
+  font-size: var(--font-M1);
+  /* color: rgb(31, 2, 164); */
+  color: black;
+}
+.nav__span {
+  color: rgb(214, 1, 1);
+}
+/* .line-break::before {
+  position: absolute;
+  content: "";
+  border: 0.18rem solid rgba(27, 2, 87, 0.916);
+  padding: 0 7rem;
+  bottom: -10%;
+  left: 1.5rem;
+  transform: translate(0, 0);
+} */
+/* ..................................................................................  */
+.nav__menu {
+  display: block;
+  margin: 1.2rem 0 0 0;
+  width: 13rem;
+  /* border: 3px black solid; */
+}
+.nav__link {
+  text-transform: uppercase;
+  font-size: var(--font-M3);
+  font-weight: 600;
+  padding: 0.8rem 0 0.8rem 1.5rem;
+}
+.nav__info-span {
+  text-decoration: underline;
+  color: rgba(0, 0, 0, 1);
+  font-weight: 750;
+}
+.nav__li:hover {
+  background-color: #9e9e9e;
+}
+.nav__icon {
+  padding-right: 0.5rem;
+  color: rgb(214, 1, 1);
+}
+/* ..................................................................................  */
+.main {
+  /* border: 2px yellow solid; */
+}
+
+.home__intro {
+  height: 80vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.5)
+        /* rgba(252, 229, 112, 0.1),
+      rgba(252, 229, 112, 0.6) */
+    ),
+    url("../../assets/images/images/image15.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+.home__card {
+  padding: 5rem 0 0 2rem;
+  position: absolute;
+  padding-left: 10%;
+  top: 19%;
+  left: 10%;
+  animation-name: intro;
+  animation-duration: 4s;
+  transition-timing-function: ease;
+}
+/* ////// to start animatio the dive should take position absolute //////*/
+@keyframes intro {
+  from {
+    left: -115%;
+    top: -30%;
+  }
+  to {
+    top: 19%;
+    left: 10%;
+  }
+}
+.home___header {
+  padding: 2rem 0.2rem 0.4rem 2rem;
+  letter-spacing: 0.11rem;
+  font-weight: 850;
+  font-size: var(--font-L1);
+  color: rgba(255, 255, 255, 0.95);
+  /* border-bottom: 3px rgba(255, 0, 0, 0.4) solid; */
+  display: inline-block;
+  text-transform: capitalize;
+  text-shadow: 0.5rem 0.5rem rgba(214, 1, 1, 0.16);
+}
+
+.home___header--text {
+  font-weight: 600;
+  font-size: var(--font-L3);
+  padding-top: 4rem;
+  text-shadow: none;
+  /* transform: rotate(-10deg); */
+}
+.line-break::before {
+  position: absolute;
+  content: "";
+  border: 0.18rem solid rgba(255, 255, 255, 0.5);
+  padding: 0 7rem;
+  bottom: -15%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
